@@ -1,0 +1,9 @@
+{
+  "name":"ucl-scores-secure",
+  "version":"1.0.0",
+  "private":true,
+  "description":"Scores UEFA Champions League via football-data.org avec token côté serveur",
+  "main":"server.js",
+  "scripts":{"start":"node server.js"},
+  "dependencies":{"dotenv":"^16.4.7","express":"^5.1.0"}
+}
