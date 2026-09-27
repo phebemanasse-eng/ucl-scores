@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UCL Scores — Scores en direct</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">⚽ <span>UCL <b>SCORES</b></span></div>
+  <nav><a class="active" href="#scores">Scores</a><a href="#upcoming">À venir</a><a href="#standings">Classement</a></nav>
+  <button id="themeBtn" class="icon-btn">☾</button>
+</header>
+<main>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">UEFA CHAMPIONS LEAGUE</p>
+      <h1>Les scores au cœur du jeu.</h1>
+      <p class="hero-text">Résultats et classement récupérés depuis le serveur sécurisé.</p>
+      <div class="api-status"><span id="statusDot"></span><span id="apiStatus">Connexion au serveur…</span></div>
+    </div>
+    <div class="trophy">🏆</div>
+  </section>
+
+  <section class="toolbar" id="scores">
+    <div class="tabs">
+      <button class="tab active" data-filter="all">Tous</button>
+      <button class="tab" data-filter="finished">Terminés</button>
+      <button class="tab" data-filter="live">En direct</button>
+      <button class="tab" data-filter="upcoming">À venir</button>
+    </div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Rechercher une équipe…">
+      <button id="refreshBtn">↻ Actualiser</button>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <div><div id="matches" class="matches"><div class="loading">Chargement des matchs…</div></div></div>
+    <aside id="standings" class="standings-card">
+      <div class="card-title"><h2>Classement</h2><span>UEFA</span></div>
+      <div class="table-head"><span>#</span><span>Équipe</span><span>MJ</span><span>Pts</span></div>
+      <div id="table"><div class="loading">Chargement…</div></div>
+    </aside>
+  </section>
+
+  <section id="upcoming" class="info-strip">
+    <div><strong>⚡ Actualisation</strong><span id="lastUpdate">—</span></div>
+    <div><strong>🔐 Sécurisé</strong><span>La clé API reste côté serveur</span></div>
+    <div><strong>📱 Responsive</strong><span>Compatible téléphone et ordinateur</span></div>
+  </section>
+</main>
+<footer>UCL SCORES · Front-end + serveur Node.js</footer>
+<script src="script.js"></script>
+</body>
+</html>
